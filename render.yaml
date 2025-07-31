@@ -2,15 +2,12 @@ services:
   - type: web
     name: primesec-autobot
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
+    region: oregon
     plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app
     envVars:
-      - key: ACCESS_TOKEN
-        value: EAAN8FmSzGREBPI4wXrAdmTQScYzdbZCZCZARTE6ZAYh7KpKilZA6dU5qKNX8ALQbsRAsfDkzbhRPiKz93LV5bFIxiNJyb9Jr72HwBH84G99HqwqZBYyMQhT3mZCegCiRjtozY95p0KV5gQjwW76GVdUQxo2rhShrNEALcN7eDKLJjZANnLZCQeXgH1mgq3VLT5zRdH125hN3ir6hqElv5fez6cdjKW7Jwetc2gutJFdgZD
+      - key: PAGE_ACCESS_TOKEN
+        value: EAAN8FmSzGREBPIL44WOuit26ytN4Gsd6v0Uaf8clZABmH1ZCsOsZAi55WIh8Kl8ZAg4GECcKAFOgzSMlZC0BVNZCnRGZCovjazXN3uCLRmPPToliln3ZAuUZBcqy0QU5bso3a6q9oan2crO2JCmGX8xBo5HjfefzF0i5XjnD9On8H8IAzJ7ZBG4IzUPrgdPFltE2jfPUurbIFm00N9HrZBRZCigk3iHA82y5G8DWPVulkht79OwZD
       - key: VERIFY_TOKEN
         value: primesecverifytoken
-      - key: PAGE_ID
-        value: 673961842474688
-      - key: IG_ID
-        value: 17841475275756978
